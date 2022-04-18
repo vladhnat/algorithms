@@ -1,3 +1,3 @@
 # Algorithms
 
-Set of algorithms.
+Set of algorithms and data structures.

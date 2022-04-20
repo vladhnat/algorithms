@@ -1,5 +1,7 @@
-const binarySearchRecursive = (arr, x, low = 0, high = arr.length - 1) => {
-  const mid = Math.floor(low + (high - low) / 2);
+const binarySearchRecursive = (
+  arr: Array<number>, x: number, low: number = 0, high: number = arr.length - 1
+): number => {
+  const mid: number = Math.floor(low + (high - low) / 2);
 
   if (high >= low) {
     if (arr[mid] === x) return mid;
@@ -14,9 +16,11 @@ const binarySearchRecursive = (arr, x, low = 0, high = arr.length - 1) => {
   }
 };
 
-const binarySearchIterative = (arr, x, low = 0, high = arr.length - 1) => {
+const binarySearchIterative = (
+  arr: Array<number>, x: number, low: number = 0, high: number = arr.length - 1
+): number => {
   while (high >= low) {
-    const mid = Math.floor(low + (high - low) / 2);
+    const mid: number = Math.floor(low + (high - low) / 2);
 
     if (arr[mid] === x) return mid;
 
@@ -32,4 +36,5 @@ const binarySearchIterative = (arr, x, low = 0, high = arr.length - 1) => {
 
 export default {
   binarySearchRecursive,
+  binarySearchIterative,
 };

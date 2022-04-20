@@ -1,5 +1,5 @@
 class FenwickTree {
-  constructor(fenwickArray, array, n) {
+  constructor(fenwickArray: Array<number>, array: Array<number>, n: number) {
     for (let i = 1; i <= n; i++) {
       fenwickArray[i] = 0;
     }
@@ -9,7 +9,7 @@ class FenwickTree {
     }
   }
 
-  update(fenwickArray, n, index, value) {
+  update(fenwickArray: Array<number>, n: number, index: number, value: number): void {
     index = index + 1;
 
     while (index <= n) {
@@ -18,8 +18,8 @@ class FenwickTree {
     }
   }
 
-  getPrefixSum(fenwickArray, index) {
-    let currSum = 0;
+  getPrefixSum(fenwickArray: Array<number>, index: number): number {
+    let currSum: number = 0;
     
     index = index + 1;
 

@@ -1,33 +1,31 @@
 class Queue {
-  constructor() {
-    this.queue = [];
-  }
+  queue: Array<any> = [];
 
-  enqueue(item) {
+  enqueue(item: any): void {
     this.queue.push(item);
   }
 
-  dequeue() {
+  dequeue(): number {
     if (this.empty()) throw new Error('Queue is Empty');
 
     return this.queue.shift();
   }
 
-  length() {
+  length(): number {
     return this.queue.length;
   }
 
-  peek() {
+  peek(): any {
     if (this.empty()) throw new Error('Queue is Empty');
 
     return this.queue[0];
   }
 
-  view(output = value => console.log(value)) {
+  view(output = value => console.log(value)): void {
     output(this.queue);
   }
 
-  empty() {
+  empty(): boolean {
     return this.queue.length === 0;
   }
 }
